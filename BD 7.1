@@ -1,0 +1,20 @@
+CREATE TABLE funcionario (
+Id int(11) NOT NULL AUTO_INCREMENT,
+Nome varchar(60) NOT NULL,
+Matricula int(05) NOT NULL,
+Veiculoid(11) NOT NULL,
+PRIMARY KEY (id),
+FOREIGN KEY (Veiculoid) REFERENCES veiculo (Id)
+);
+
+INSERT INTO veiculo (Placa, Marca, Modelo) VALUES
+("OKK0234", "BMW", "I3"),
+("OKK0133", "JEEP", "RENEGADE"),
+("OKK0220", "VW", "NEW BEETLE"),
+("OKK0235", "BMW", "X5");
+
+INSERT INTO funcionario (Nome, Matricula, VeiculoId) VALUES
+("EMANUEL", "4554", 1),
+("JUELINA", "5678", 2),
+("MASCARENHAS", "5990", 4),
+("JOESVALDA", "5667", 3);
